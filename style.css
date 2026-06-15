@@ -1,0 +1,688 @@
+/* ===== HOME PAGE CSS ===== */
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:#000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* ===== LOGO ===== */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+.logo h2{
+    color:white;
+    font-size:28px;
+}
+
+/* ===== NAVBAR ===== */
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00c6ff;
+}
+
+/* ===== HERO / HOME SECTION ===== */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px;
+    background:linear-gradient(to right,#000,#0f2027);
+    color:white;
+    min-height:90vh;
+    flex-wrap:wrap;
+}
+
+/* LEFT SIDE TEXT */
+.hero-left{
+    width:50%;
+}
+
+.hero-left h1{
+    font-size:30px;
+    color:#00c6ff;
+}
+
+.hero-left h2{
+    font-size:50px;
+    margin:10px 0;
+}
+
+.hero-left p{
+    font-size:18px;
+    color:#ddd;
+    margin-bottom:20px;
+}
+
+/* ===== SEARCH BOX ===== */
+#searchBar{
+    width:300px;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+    font-size:16px;
+}
+
+/* ===== HERO IMAGE / BANNER ===== */
+.hero-right{
+    width:45%;
+    text-align:center;
+}
+
+.hero-right img{
+    width:100%;
+    max-width:1000px;
+    height:500px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav ul{
+        flex-direction:column;
+        margin-top:15px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:30px;
+    }
+
+    .hero-left,
+    .hero-right{
+        width:100%;
+    }
+
+    .hero-left h2{
+        font-size:35px;
+    }
+
+    #searchBar{
+        width:100%;
+    }
+
+    .hero-right img{
+        height:350px;
+        margin-top:20px;
+    }
+}
+
+/* PRODUCT */
+.products{
+    padding:40px;
+}
+
+.products h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:35px;
+}
+
+.product-container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    padding:10px;
+}
+
+.card h3{
+    margin:10px 0;
+    font-size:20px;
+}
+
+.card p{
+    color:green;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.card button{
+    border:none;
+    padding:10px 15px;
+    margin:8px;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    font-size:15px;
+}
+
+.card button:first-of-type{
+    background:orange;
+}
+
+.card button:last-of-type{
+    background:green;
+}
+
+.card button:hover{
+    opacity:0.8;
+}
+
+/* ABOUT */
+#about{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+#about h1{
+    margin-bottom:20px;
+}
+
+/* CONTACT */
+#contact{
+    text-align:center;
+    padding:50px;
+}
+
+#contact h1{
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        margin-top:15px;
+    }
+
+    nav ul li{
+        margin:10px 0;
+    }
+
+    .hero img{
+        height:250px;
+    }
+
+    .hero-text h1{
+        font-size:30px;
+    }
+
+    .hero-text p{
+        font-size:16px;
+    }
+
+    #searchBar{
+        width:220px;
+    }
+}
+
+/* ===== PROFESSIONAL HEADER ===== */
+
+header{
+    background:#0d1117;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+    margin-right:12px;
+}
+
+.logo h2{
+    color:white;
+    font-size:34px;
+    font-weight:bold;
+}
+
+/* NAVBAR */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:19px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00bfff;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+
+.hero img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    filter:brightness(85%);
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    width:35%;
+}
+
+.hero-text h1{
+    color:white;
+    font-size:52px;
+    margin-bottom:10px;
+}
+
+.hero-text p{
+    color:#ddd;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+#searchBar{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+    font-size:17px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.4);
+}
+
+/* PRODUCTS TITLE */
+
+.products h1{
+    font-size:45px;
+    text-align:center;
+    margin:40px 0;
+    font-weight:bold;
+}
+
+/* FINAL PROFESSIONAL FIX */
+
+.hero{
+    position:relative;
+    width:100%;
+}
+
+.hero img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    bottom:100px;
+    left:90px;
+    width:300px;
+}
+
+#searchBar{
+    width:100%;
+    padding:14px 20px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+    font-size:16px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+.logo img{
+    width:42px;
+    height:42px;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+nav ul li a{
+    font-size:16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: black;
+}
+
+/* LOGO FIX */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+/* NAVBAR FIX */
+nav ul {
+  display: flex;        /* line में लाने के लिए */
+  list-style: none;     /* bullet हटाने के लिए */
+  gap: 25px;            /* space देने के लिए */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #00c6ff;
+}
+
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* SEARCH BOX CENTER FIX */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+#searchBar {
+  padding: 12px;
+  width: 300px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(to right, #000000, #0f2027);
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 50px;
+  color: #00c6ff;
+  margin: 0;
+}
+
+.hero-left h2 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.hero-left p {
+  margin-bottom: 20px;
+}
+
+/* SEARCH */
+#searchBar {
+  padding: 12px;
+  width: 280px;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.features div {
+  font-size: 14px;
+}
+
+/* RIGHT IMAGE */
+.hero-right img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.hero-right img:hover {
+  transform: scale(1.05);
+}
+
+/* PRODUCT HOVER */
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(to right, #000000, #0a0a0a);
+  color: white;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.hero-left h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.hero-left p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  margin: 20px 0;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 25px 0 0 25px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  background: #00bcd4;
+  color: white;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}
+
+.features span {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.hero-right img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.banner img{
+    width: 100%;
+    height: 400px;
+}
+
+/* BANNER FIX */
+.hero{
+    width:100%;
+    height:400px; /* banner बड़ा हो जाएगा */
+    overflow:hidden;
+}
+
+.hero img{
+    width:80%;
+    height:80%;
+    object-fit:cover;
+}
+
+/* HEADER FIX */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* HERO / BANNER FIX */
+.hero{
+    width: 100%;
+    margin-top: 90px; /* header के नीचे लाने के लिए */
+    position: relative;
+}
+
+.hero img{
+    width: 100%;
+    height: 500px; /* banner बड़ा */
+    object-fit: cover;
+}
+
+/* TEXT & SEARCH BAR */
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
